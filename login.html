@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Finance - Login</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Login to Your Account</h1>
+        <form id="pinForm">
+            <div class="pin-input">
+                <input type="password" maxlength="1" class="pin" data-index="0" autofocus>
+                <input type="password" maxlength="1" class="pin" data-index="1">
+                <input type="password" maxlength="1" class="pin" data-index="2">
+                <input type="password" maxlength="1" class="pin" data-index="3">
+            </div>
+            <p class="error-message" id="pinError"></p>
+            <button type="submit" class="btn">Submit</button>
+        </form>
+
+        <div id="securityQuestions" class="hidden">
+            <h2>Security Questions</h2>
+            <form id="securityForm">
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" required>
+                <label for="favoriteDay">Favorite Day:</label>
+                <select id="favoriteDay" required>
+                    <option value="">Select a day</option>
+                    <option value="Monday">Monday</option>
+                    <option value="Tuesday">Tuesday</option>
+                    <option value="Wednesday">Wednesday</option>
+                    <option value="Thursday">Thursday</option>
+                    <option value="Friday">Friday</option>
+                    <option value="Saturday">Saturday</option>
+                    <option value="Sunday">Sunday</option>
+                </select>
+                <label for="favoriteNumber">Favorite Number (0-9):</label>
+                <input type="number" id="favoriteNumber" min="0" max="9" required>
+                <p class="error-message" id="securityError"></p>
+                <button type="submit" class="btn">Save</button>
+            </form>
+        </div>
+
+        <div id="forgotPIN" class="hidden">
+            <h2>Forgot PIN?</h2>
+            <form id="recoveryForm">
+                <label for="recoveryDOB">Date of Birth:</label>
+                <input type="date" id="recoveryDOB" required>
+                <label for="recoveryDay">Favorite Day:</label>
+                <select id="recoveryDay" required>
+                    <option value="">Select a day</option>
+                    <option value="Monday">Monday</option>
+                    <option value="Tuesday">Tuesday</option>
+                    <option value="Wednesday">Wednesday</option>
+                    <option value="Thursday">Thursday</option>
+                    <option value="Friday">Friday</option>
+                    <option value="Saturday">Saturday</option>
+                    <option value="Sunday">Sunday</option>
+                </select>
+                <label for="recoveryNumber">Favorite Number (0-9):</label>
+                <input type="number" id="recoveryNumber" min="0" max="9" required>
+                <p class="error-message" id="recoveryError"></p>
+                <button type="submit" class="btn">Reset PIN</button>
+            </form>
+        </div>
+
+        <p class="forgot-pin-link"><a href="#" id="forgotPINLink">Forgot PIN?</a></p>
+    </div>
+    <script src="login.js"></script>
+</body>
+</html>

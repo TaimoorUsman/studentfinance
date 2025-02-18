@@ -1,0 +1,117 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #f5f5f5;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    transition: background 0.3s, color 0.3s;
+}
+
+.container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+h1 {
+    color: #1976d2;
+}
+
+#darkModeToggle {
+    background: #1976d2;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#darkModeToggle:hover {
+    background: #1565c0;
+}
+
+.savings-section {
+    margin-bottom: 2rem;
+}
+
+.savings-card {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.savings-card form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.savings-card input {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.btn {
+    background: #1976d2;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #1565c0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.charts {
+    margin-top: 2rem;
+}
+
+canvas {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background: #121212;
+    color: #fff;
+}
+
+body.dark-mode .savings-card,
+body.dark-mode table,
+body.dark-mode canvas {
+    background: #1e1e1e;
+    color: #fff;
+}
+
+body.dark-mode th,
+body.dark-mode td {
+    border-bottom: 1px solid #333;
+}

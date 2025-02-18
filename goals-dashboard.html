@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Finance - Goals Dashboard</title>
+    <link rel="stylesheet" href="goals-dashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Goals Dashboard</h1>
+            <button id="darkModeToggle">🌙 Dark Mode</button>
+        </header>
+
+        <!-- Goals Management Section -->
+        <section class="goals-section">
+            <h2>Goals Management</h2>
+            <form id="goalForm">
+                <label for="goalName">Goal Name:</label>
+                <input type="text" id="goalName" required>
+                <label for="targetAmount">Target Amount:</label>
+                <input type="number" id="targetAmount" step="0.01" required>
+                <label for="deadline">Deadline:</label>
+                <input type="date" id="deadline" required>
+                <button type="submit" class="btn">Create Goal</button>
+            </form>
+        </section>
+
+        <!-- Add Money to Goal Section -->
+        <section class="add-money-section">
+            <h2>Add Money to Goal</h2>
+            <form id="addMoneyForm">
+                <label for="goalSelect">Select Goal:</label>
+                <select id="goalSelect" required>
+                    <option value="">Select a goal</option>
+                </select>
+                <label for="addAmount">Amount:</label>
+                <input type="number" id="addAmount" step="0.01" required>
+                <button type="submit" class="btn">Add Money</button>
+            </form>
+        </section>
+
+        <!-- Goals List Section -->
+        <section class="goals-list">
+            <h2>Your Goals</h2>
+            <div id="goalsContainer">
+                <!-- Goals will be added dynamically -->
+            </div>
+        </section>
+
+        <!-- Goals Progress Section -->
+        <section class="visualization-section">
+            <h2>Goals Progress</h2>
+            <div class="charts">
+                <canvas id="goalsProgressChart"></canvas>
+            </div>
+        </section>
+
+        <!-- Completed Goals History -->
+        <section class="history-section">
+            <h2>Completed Goals</h2>
+            <table id="completedGoalsHistory">
+                <thead>
+                    <tr>
+                        <th>Goal Name</th>
+                        <th>Target Amount</th>
+                        <th>Saved Amount</th>
+                        <th>Deadline</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Rows will be added dynamically -->
+                </tbody>
+            </table>
+        </section>
+    </div>
+    <script src="goals-dashboard.js"></script>
+</body>
+</html>

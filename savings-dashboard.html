@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Finance - Savings Dashboard</title>
+    <link rel="stylesheet" href="savings-dashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Savings Dashboard</h1>
+            <button id="darkModeToggle">🌙 Dark Mode</button>
+        </header>
+
+        <!-- Savings Section -->
+        <section class="savings-section">
+            <h2>Savings Management</h2>
+            <div class="savings-card">
+                <p>Total Savings: <span id="totalSavings">$0.00</span></p>
+                <form id="savingsForm">
+                    <label for="savingsAmount">Amount:</label>
+                    <input type="number" id="savingsAmount" step="0.01" required>
+                    <button type="submit" class="btn" id="addSavings">Add to Savings</button>
+                    <button type="button" class="btn" id="withdrawSavings">Withdraw from Savings</button>
+                </form>
+            </div>
+            <div class="savings-history">
+                <h3>Savings History</h3>
+                <table id="savingsHistory">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Description</th>
+                            <th>Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Rows will be added dynamically -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Visualization Section -->
+        <section class="visualization-section">
+            <h2>Savings Growth</h2>
+            <div class="charts">
+                <canvas id="savingsGrowthChart"></canvas>
+            </div>
+        </section>
+    </div>
+    <script src="savings-dashboard.js"></script>
+</body>
+</html>
